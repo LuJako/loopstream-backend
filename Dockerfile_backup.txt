@@ -5,14 +5,11 @@ RUN apk add --no-cache ffmpeg
 
 WORKDIR /app
 
-# Copy package files
 COPY package*.json ./
 RUN npm ci --only=production
 
-# Copy seluruh isi folder backend ke dalam docker
-COPY . .
+COPY src/ ./src/
 
 EXPOSE 3001
 
-# Menggunakan start script dari package.json
-CMD ["npm", "start"]
+CMD ["node", "src/server.js"]
