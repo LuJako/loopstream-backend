@@ -1,0 +1,26 @@
+{
+  "name": "loopstream-backend",
+  "version": "1.0.0",
+  "description": "LiveStream Manager Backend - Stream videos from Google Drive to YouTube/TikTok",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "axios": "^1.6.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "node-cron": "^3.0.3",
+    "uuid": "^9.0.0",
+    "dotenv": "^16.3.1",
+    "express-rate-limit": "^7.1.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
