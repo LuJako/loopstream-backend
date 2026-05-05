@@ -7,7 +7,7 @@ WORKDIR /app
 
 # Copy package files
 COPY package*.json ./
-RUN npm ci --only=production
+RUN npm install --omit=dev
 
 # Copy seluruh isi folder backend ke dalam docker
 COPY . .
